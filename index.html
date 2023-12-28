@@ -47,9 +47,9 @@
                     <div class="nav-inner">
                         <!-- Start Navbar -->
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/images/logo/logo.png" alt="Logo">
-                            </a>
+                            <div class="navbar-brand">
+                              <a class="navbar-brand" href="index.html"><button class="button-agenda">Agendar consulta</button></a>
+                            </div>
                             <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -64,6 +64,9 @@
                                   </li>
                                   <li class="nav-item">
                                     <a href="services.html" aria-label="Toggle navigation">#DesafioTurbo</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a href="services.html" aria-label="Toggle navigation">Quem Sou Eu</a>
                                   </li>
                                   <li class="nav-item">
                                     <a href="contact.html" aria-label="Toggle navigation">Contato</a>
@@ -159,11 +162,34 @@
                     <!-- Start Single Service -->
                     <div class="single-service one">
                         <div class="service-icon">
-                            <i class="lni lni-android"></i>
+                            <i class="lni lni-slim"></i>
                         </div>
                         <h3>Acompanhamento de Emagrecimento e Nutrição Clínica</h3>
                         <p>Acompanho e apoio pacientes em sua jornada de emagrecimento, oferecendo estratégias práticas, orientações nutricionais e suporte contínuo para alcançar resultados sustentáveis.</p>
-                        <a href="javascript:void(0)">Learn More <i class="lni lni-arrow-right"></i></a>
+                        <!-- MODAL -->
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#modal1">
+                          Saiba mais <i class="lni lni-arrow-right"></i>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Acompanhamento de Emagrecimento e Nutrição Clínica</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                ...
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
                     </div>
                     <!-- End Single Service -->
                 </div>
@@ -171,11 +197,32 @@
                     <!-- Start Single Service -->
                     <div class="single-service two">
                         <div class="service-icon">
-                            <i class="lni lni-heart"></i>
+                            <i class="lni lni-dinner"></i>
                         </div>
                         <h3>Programas de Reeducação Alimentar</h3>
                         <p>Desenvolvo programas de reeducação alimentar focados em promover uma relação saudável com a comida, incentivando escolhas inteligentes e hábitos alimentares equilibrados a longo prazo.</p>
-                        <a href="javascript:void(0)">Learn More <i class="lni lni-arrow-right"></i></a>
+                        <!-- MODAL -->
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#modal2">
+                          Saiba mais <i class="lni lni-arrow-right"></i>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Programas de Reeducação Alimentar</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                ...
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                     <!-- End Single Service -->
                 </div>
@@ -183,26 +230,69 @@
                     <!-- Start Single Service -->
                     <div class="single-service three">
                         <div class="service-icon">
-                            <i class="lni lni-pointer-top"></i>
+                            <i class="lni lni-target-customer"></i>
                         </div>
                         <h3>Consulta Nutricional Personalizada</h3>
                         <p>Ofereço consultas individuais para desenvolver planos alimentares personalizados, levando em consideração suas necessidades, estilo de vida e objetivos específicos de saúde e emagrecimento.
                         </p>
-                        <a href="javascript:void(0)">Learn More <i class="lni lni-arrow-right"></i></a>
+                        <!-- MODAL -->
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#modal3">
+                          Saiba mais <i class="lni lni-arrow-right"></i>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Consulta Nutricional Personalizada</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                ...
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                     <!-- End Single Service -->
                 </div>
-
-                <div class="row">
+              </div>
+            
+            <div class="row">
                     <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".4s">
                         <!-- Start Single Service -->
                         <div class="single-service one">
                             <div class="service-icon">
-                                <i class="lni lni-android"></i>
+                                <i class="lni lni-display-alt"></i>
                             </div>
                             <h3>Educação Alimentar e Nutricional | Palestras</h3>
                             <p>Realizo palestras e workshops educativos sobre nutrição, abordando temas como alimentação saudável, emagrecimento sustentável, estratégias para uma vida equilibrada e gestão de peso.</p>
-                            <a href="javascript:void(0)">Learn More <i class="lni lni-arrow-right"></i></a>
+                            <!-- MODAL -->
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#modal4">
+                          Saiba mais <i class="lni lni-arrow-right"></i>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Educação Alimentar e Nutricional | Palestras</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                ...
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         <!-- End Single Service -->
                     </div>
@@ -215,7 +305,28 @@
                             <h3>Apoio Emocional e Motivacional</h3>
                             <p>Além do aspecto nutricional, ofereço suporte emocional e estratégias motivacionais para superar desafios, estresse relacionado ao emagrecimento e manutenção de um estilo de vida saudável.
                             </p>
-                            <a href="javascript:void(0)">Learn More <i class="lni lni-arrow-right"></i></a>
+                            <!-- MODAL -->
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#modal5">
+                          Saiba mais <i class="lni lni-arrow-right"></i>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Apoio Emocional e Motivacional</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                ...
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         <!-- End Single Service -->
                     </div>

@@ -1315,6 +1315,56 @@ ol {
   overflow: hidden;
 }
 
+.button-agenda {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #28CC75;
+  color: #fff;
+  border: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  z-index: 1;
+  margin-right: 7px;
+  overflow: hidden;
+  padding: 16px 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .button-agenda {
+    padding: 14px 25px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 767px) {
+  .button-agenda {
+    padding: 14px 25px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.button-agenda i {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.button-agenda:last-child {
+  margin: 0;
+}
+
+.button-agenda:hover {
+  color: #fff;
+  background-color: #6C32E0;
+}
+
+.button {
+  margin-left: 0 !important;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .button .btn {
     padding: 14px 25px;
@@ -2939,22 +2989,24 @@ ol {
   font-size: 16px;
 }
 
-.single-service a {
+.single-service button {
   color: #6C32E0;
   margin-top: 40px;
   display: inline-block;
   font-weight: 500;
+  background-color: transparent;
   font-size: 15px;
+  border: none;
 }
 
-.single-service a i {
+.single-service button i {
   font-size: 22px;
   margin-left: 12px;
   position: relative;
   top: 3px;
 }
 
-.single-service a:hover {
+.single-service button:hover {
   letter-spacing: 1px;
 }
 
@@ -2964,7 +3016,7 @@ ol {
           box-shadow: 0px 10px 30px rgba(253, 114, 59, 0.25);
 }
 
-.single-service.two a {
+.single-service.two button {
   color: #28CC75;
 }
 
@@ -2974,7 +3026,7 @@ ol {
           box-shadow: 0px 10px 30px rgba(255, 168, 66, 0.26);
 }
 
-.single-service.three a {
+.single-service.three button {
   color: #FFA842;
 }
 
