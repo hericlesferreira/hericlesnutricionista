@@ -2634,6 +2634,10 @@ ol {
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.13);
 }
 
+.border-dashed {
+  border-style: dashed !important;
+}
+
 .pricing-table .single-table.middle .table-head .title {
   border-color: #F20487;
   color: #F20487;

@@ -60,12 +60,21 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="../index.html" class="active" aria-label="Toggle navigation">Início</a>
+                                        <a href="../index.html" aria-label="Toggle navigation">Início</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="projetos/desafio-espera.html" class="active" aria-label="Toggle navigation">#DesafioTurbo</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="../hericles-nutricionista.html" aria-label="Toggle navigation">Quem Sou Eu</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="../contato.html" aria-label="Toggle navigation">Contato</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
                             <div class="button">
-                                <a href="https://pay.kiwify.com.br/iJPsIGN" class="btn">LISTA DE ESPERA<i class="lni lni-ticket"></i></a>
+                                <a href="formulario.html" class="btn">LISTA DE ESPERA<i class="lni lni-ticket"></i></a>
                             </div>
                         </nav>
                         <!-- End Navbar -->
@@ -83,9 +92,9 @@
                 <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
                     <div class="hero-content">
                         <img src="assets/images/logo/logo-projeto.png" width="220" alt="Logo">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Entre para a Lista de Espera para ser avisado da próxima abertura de vagas e destravar seu processo de emagrecimento</h2>
+                        <h3 class="wow fadeInUp text-uppercase text-light" data-wow-delay=".4s">Entre para a Lista de Espera para ser avisado da próxima abertura de vagas e destravar seu processo de emagrecimento</h3>
                         <div class="button wow fadeInUp" data-wow-delay=".8s">
-                            <a href="https://pay.kiwify.com.br/iJPsIGN" class="btn ">QUERO SER AVISADO DA PRÓXIMA TURMA</a>
+                            <a href="formulario.html" class="btn">QUERO SER AVISADO DA PRÓXIMA TURMA</a>
                         </div>
                     </div>
                 </div>
@@ -228,7 +237,7 @@
                         </div>
                         <!-- End Table Head -->
                         <div class="button">
-                            <a href="https://pay.kiwify.com.br/iJPsIGN" class="btn">QUERO SER AVISADO DA PRÓXIMA TURMA</a>
+                            <a href="formulario.html" class="btn">QUERO SER AVISADO DA PRÓXIMA TURMA</a>
                         </div>
                         <!-- Start Table Content -->
                         <div class="table-content">
@@ -277,7 +286,7 @@
 
                         </div>
                         <div class="button wow fadeInUp" data-wow-delay=".8s">
-                            <a href="https://pay.kiwify.com.br/iJPsIGN" class="btn">QUERO ME INSCREVER NA LISTA DE ESPERA<i class="lni lni-cart-full"></i></a>
+                            <a href="formulario.html" class="btn">QUERO ME INSCREVER NA LISTA DE ESPERA<i class="lni lni-cart-full"></i></a>
                         </div>
                     </div>
                 </div>
@@ -383,7 +392,7 @@
                             <div class="single-footer f-about">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="assets/images/logo/logo.png" alt="#">
+                                        <img src="assets/images/logo/dark-logo.png" alt="#">
                                     </a>
                                 </div>
                                 <p>Um projeto por <b>Hericles Ferreira</b> <br> Nutricionista | CRN-10 0000. <br> Vida real para pessoas reais.</p>
@@ -437,77 +446,7 @@
     <script src="assets/js/glightbox.min.js"></script>
     <script src="assets/js/count-up.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        //========= glightbox
-        GLightbox({
-            'href': 'https://www.youtube.com/watch?v=Gxw45q3Ga3k',
-            'type': 'video',
-            'source': 'youtube', //vimeo, youtube or local
-            'width': 900,
-            'autoplayVideos': true,
-        });
-
-        //========= testimonial 
-        tns({
-            container: '.testimonial-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            mouseDrag: true,
-            gutter: 0,
-            nav: true,
-            controls: false,
-            controlsText: ['<i class="lni lni-arrow-left"></i>', '<i class="lni lni-arrow-right"></i>'],
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                540: {
-                    items: 1,
-                },
-                768: {
-                    items: 2,
-                },
-                992: {
-                    items: 2,
-                },
-                1170: {
-                    items: 3,
-                }
-            }
-        });
-    </script>
-    <script>
-        const finaleDate = new Date("April 1, 2024 00:00:00").getTime();
-
-        const timer = () => {
-            const now = new Date().getTime();
-            let diff = finaleDate - now;
-            if (diff < 0) {
-                document.querySelector('.alert').style.display = 'block';
-                document.querySelector('.container').style.display = 'none';
-            }
-
-            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            let hours = Math.floor(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-            let minutes = Math.floor(diff % (1000 * 60 * 60) / (1000 * 60));
-            let seconds = Math.floor(diff % (1000 * 60) / 1000);
-
-            days <= 99 ? days = `0${days}` : days;
-            days <= 9 ? days = `00${days}` : days;
-            hours <= 9 ? hours = `0${hours}` : hours;
-            minutes <= 9 ? minutes = `0${minutes}` : minutes;
-            seconds <= 9 ? seconds = `0${seconds}` : seconds;
-
-            document.querySelector('#days').textContent = days;
-            document.querySelector('#hours').textContent = hours;
-            document.querySelector('#minutes').textContent = minutes;
-            document.querySelector('#seconds').textContent = seconds;
-
-        }
-        timer();
-        setInterval(timer, 1000);
-    </script>
+   
 </body>
 
 </html>
