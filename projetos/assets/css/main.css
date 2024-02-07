@@ -2078,12 +2078,13 @@ ol {
 /*======================================
     Hero Area CSS
 ========================================*/
+
 .hero-area {
   position: relative;
   background-color: #101130;
   padding: 200px 0 150px 0;
   padding-bottom: 240px;
-  background-image: url("../images/hero/hero-bg.jpg");
+  background-image: url("../images/hero/hero-bg3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
