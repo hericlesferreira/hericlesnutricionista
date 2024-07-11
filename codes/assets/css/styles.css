@@ -37,6 +37,11 @@
   }
 }
 /* PERSONAL */
+
+html {
+  margin: auto;
+}
+
 .rounded-5{
   border-radius: 10px;
 }
@@ -75,6 +80,8 @@ margin-right:10px;
 
 .btn-link {
   text-decoration: none !important;
+  white-space: normal;
+  text-align: left;
 }
 
 .white {
@@ -87,8 +94,7 @@ margin-right:10px;
 }
 .title {
   color: var(--title-color);
-  font-weight: var(--font-bold);
-  font-size: 1.5rem;
+
 }
 .black {
  color: #000000;
