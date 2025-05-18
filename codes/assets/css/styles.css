@@ -2,8 +2,8 @@
 :root {
   --header-height: 3.5rem;
   --first-color-light: hsl(0, 0%, 100%);
-  --svg-bg-color: #001845;
-  --title-color: #28CC75;
+  --svg-bg-color: #2563ea;
+  --title-color: #2563ea;
   --title-color-black: hsl(180, 4%, 12%);
   --text-color: #001845;
   --text-color-light: hsl(0, 0%, 100%);
@@ -38,24 +38,71 @@
 }
 /* PERSONAL */
 
+.slider-wrapper {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  animation: scroll-horizontal 30s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+
+
+
+
+
 html {
   margin: auto;
 }
+
+@media screen and (max-width: 1330px) {
+  .hidden-xs{
+   display:none;
+  }
+ 
+  .visible-xs {
+   display:block;
+  }
+ }
+
+ @media screen and (max-width: 1024px) {
+  .hidden-xs2{
+   display:none;
+  }
+ 
+  .visible-xs2 {
+   display:block;
+  }
+ }
 
 .rounded-5{
   border-radius: 10px;
 }
 .bg-gradient{
-  background: rgb(40,204,117);
-  background: linear-gradient(0deg, rgba(40,204,117,0.1516981792717087) 0%, rgba(255,255,255,0) 100%);
+  background: #2563ea;
+  background: linear-gradient(0deg, rgba(37, 99, 234, 0.152) 0%, rgba(37,99,234,0) 100%);
 }
 
 .bg-blue {
-  background: linear-gradient(0deg, #001845 0%, #011c53 100%);
+  background: linear-gradient(0deg, #2563ea 0%, #0a2358 100%);
   color: white;
 }
 
-.fotografia {
+.fotografia1 {
+  z-index: 0;
   -webkit-transform: rotate(-5deg);
 -moz-transform: rotate(-5deg);
 -o-transform: rotate(-5deg);
@@ -64,6 +111,21 @@ background: #eee;
 border: 1px solid #fff;
 margin-bottom: 15px;
 margin-right:10px;
+-moz-box-shadow: 0px 5px 15px #333;
+-webkit-box-shadow: 0px 5px 15px #333;
+-o-box-shadow: 0px 5px 15px #333;
+}
+
+.fotografia2 {
+  z-index: 0;
+  -webkit-transform: rotate(+5deg);
+-moz-transform: rotate(+5deg);
+-o-transform: rotate(+5deg);
+padding: 10px 10px 25px 10px;
+background: #eee;
+border: 1px solid #fff;
+margin-bottom: 150px;
+margin-left:-100px;
 -moz-box-shadow: 0px 5px 15px #333;
 -webkit-box-shadow: 0px 5px 15px #333;
 -o-box-shadow: 0px 5px 15px #333;
@@ -100,37 +162,43 @@ margin-right:10px;
  color: #000000;
 }
 .contato {
-	background:linear-gradient(to bottom, #28cc75 5%, #12a858 100%);
-	background-color:#28cc75;
-	border-radius:35px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:21px;
-	padding:17px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 7px #4d4745;
+	background:linear-gradient(to bottom, #ffb347   5%, #ff5722   100%);
+	color: #ffffff;                   /* Texto branco */
+  padding: 1rem 2rem;               /* Espaçamento interno */
+  font-size: 1.125rem;              /* Tamanho da fonte */
+  font-weight: 600;                 /* Negrito */
+  border: none;                     /* Sem borda */
+  border-radius: 12px;              /* Cantos arredondados */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  cursor: pointer;                  /* Mãozinha ao passar o mouse */
+  transition: all 0.25s ease;       /* Transição suave */
+  text-decoration: none;
 }
 
 .nav__link .contato{
   font-size:16px;
 	padding:10px 20px;
+  text-decoration: none;
 }
 
 .contato:hover {
-	background:linear-gradient(to bottom, #082a69 5%, #001845 100%);
-	background-color:#12a858;
-  color:#ffffff;
+	background:linear-gradient(to bottom, #082a69 5%, #2563ea 100%);
+	transform: scale(1.05);           /* Leve zoom no hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
+  color: #ffffff;
   text-decoration: none;
 }
 .contato:active {
 	position:relative;
 	top:1px;
+  transform: scale(0.97);           /* Efeito de clique */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra reduzida */
+  text-decoration: none;
 }
 
 .subtitle {
   font-size: 1.7rem;
-  color: #001845;
+  color: #2563ea;
 }
 
 i {
@@ -421,7 +489,7 @@ img {
   transform: translateX(0.25rem);
 }
 .services__card:hover {
-  background-color: #001845;
+  background-color: #2563ea;
   box-shadow: rgba(0, 0, 0, 0.2) 0 60px 40px -7px;
 }
 .services__card:hover .services__shape {
