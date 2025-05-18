@@ -38,27 +38,6 @@
 }
 /* PERSONAL */
 
-.slider-wrapper {
-  height: auto;
-  width: 100%;
-  position: relative;
-}
-
-.slider-track {
-  display: flex;
-  animation: scroll-horizontal 30s linear infinite;
-  will-change: transform;
-}
-
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-75%);
-  }
-}
-
 
 
 
