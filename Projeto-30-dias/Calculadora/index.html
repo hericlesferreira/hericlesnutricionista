@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <script src="https://kit.fontawesome.com/95478cb03c.js" crossorigin="anonymous"></script>
+  <title>Calculadora TMB e GET</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; }
+    .titulo { color: #2563ea; }
+    .btn-pink { background-color: #c2185b; color: white; }
+    .resultado { margin-top: 20px; font-weight: normal; }
+    .pl-5 { padding-left: 50px;}
+    .pr-5 { padding-right: 50px;}
+  </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-dark bg-primary mb-5">
+    <a class="navbar-brand pl-5" href="#">
+        <img src="logo-light.png" height="30" alt="">
+    </a>
+    <span class="navbar-text pr-5">
+      <h1 class="m-0"><a href="https://instagram.com/hericlesnutri"><i class="fa-brands fa-instagram"></i></a></h1>
+    </span>
+    </nav>
+   
+    <div class="container">
+        <h3 class="titulo">Taxa Metabólica</h3>
+    <p>A Taxa Metabólica Basal (TMB) é o mínimo de energia necessária para manter as funções do organismo em repouso...</p>
+
+    <div class="row g-3">
+      <div class="col-md-3">
+        <label>Sexo</label>
+        <select id="sexo" class="form-select">
+          <option value="homem">Homem</option>
+          <option value="mulher">Mulher</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label>Altura (cm)</label>
+        <input type="number" id="estatura" class="form-control" placeholder="Ex: 170">
+      </div>
+      <div class="col-md-3">
+        <label>Peso (kg)</label>
+        <input type="number" id="peso" class="form-control" placeholder="Ex: 69.2">
+      </div>
+      <div class="col-md-3">
+        <label>Idade</label>
+        <input type="number" id="idade" class="form-control" placeholder="Ex: 30">
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <label>Nível de atividade física</label>
+      <select id="fa" class="form-select">
+        <option value="1.2">Sedentário - Não pratico atividade física</option>
+        <option value="1.375">Baixo - Exercicio físico de 1 a 2 vezes por semana</option>
+        <option value="1.55">Moderado - Exercicio físico de 3 a 5 vezes por semana</option>
+        <option value="1.725">Alto - Exercicio físico todos os dias</option>
+        <option value="1.9">Muito alto - Exercicio físico 2 vezes por dia</option>
+      </select>
+    </div>
+
+    <div class="mt-4">
+      <button class="btn btn-pink" onclick="calcular()">CALCULAR</button>
+      <button class="btn btn-outline-primary" onclick="limpar()">LIMPAR</button>
+    </div>
+
+    </div>
+    
+
+    <div class="container">
+        <div id="resultado" class="resultado"></div>
+    </div>
+    </div>
+
+  <script>
+    function calcular() {
+      const sexo = document.getElementById("sexo").value;
+      const estatura = parseFloat(document.getElementById("estatura").value);
+      const peso = parseFloat(document.getElementById("peso").value);
+      const idade = parseInt(document.getElementById("idade").value);
+      const fa = parseFloat(document.getElementById("fa").value);
+
+      if (isNaN(estatura) || isNaN(peso) || isNaN(idade)) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+      }
+
+      let tmb;
+      if (sexo === "homem") {
+        tmb = 66 + (13.8 * peso) + (5 * estatura) - (6.8 * idade);
+      } else {
+        tmb = 655 + (9.6 * peso) + (1.8 * estatura) - (4.7 * idade);
+      }
+
+      const get = tmb * fa;
+      const minCut = get - 500;
+    
+    let plano;
+    let kcal;
+    let deficit;
+    if (minCut > 1950) {
+        plano = "Plano alimentar A";
+        kcal = 2000;
+        deficit = get - kcal;
+    } else if (minCut > 1750 && minCut < 1950){
+        plano = "Plano alimentar B";
+        kcal = 1800;
+        deficit = get - kcal;
+    } else if (minCut > 1550 && minCut < 1750){
+        plano = "Plano alimentar C";
+        kcal = 1600;
+        deficit = get - kcal;
+    } else {
+        plano = "Plano alimentar D";
+        kcal = 1400;
+        deficit = get - kcal;
+    }
+
+
+      document.getElementById("resultado").innerHTML = `
+        <br>
+        <div class="alert alert-light" role="alert">
+            <h3>TMB (Taxa Metabólica Basal): <span class="text-primary">${tmb.toFixed(0)} kcal</span></h3><br>
+            <small>Obs: essas são as calorias que o seu corpo precisa para se manter, sem fazer nenhum tipo de atividade física.</small>
+        </div>
+        
+        <div class="alert alert-light" role="alert">
+            <h3>GET (Gasto Energético Total): <span class="text-success">${get.toFixed(0)} kcal</span></h3><br>
+            <small>Obs: Essas são as calorias que você precisa para manter o seu físico atualmente, considerando o seu nível de atividade física.</small>
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+            <h2>Para emagrecer, você deve usar o <span class="text-danger">${plano}</span>, contendo <span class="text-danger">${kcal}</span> kcal.
+            Isso lhe dará um déficit calórico aproximado de <span class="text-danger">${deficit.toFixed(0)}</span> kcal.</h2>
+        </div>
+      `;
+    }
+
+    function limpar() {
+      document.getElementById("sexo").value = "homem";
+      document.getElementById("estatura").value = "";
+      document.getElementById("peso").value = "";
+      document.getElementById("idade").value = "";
+      document.getElementById("fa").value = "1.2";
+      document.getElementById("resultado").innerHTML = "";
+    }
+  </script>
+</body>
+</html>
